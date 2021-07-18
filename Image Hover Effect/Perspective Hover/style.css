@@ -1,0 +1,64 @@
+body{
+    background: #262626;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 400px;
+    height: 320px;
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f0e0d2;
+    margin: 200px auto;
+    perspective: 50em;
+    box-sizing: border-box;
+    transition: 0.5s;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.container img{
+    width: 100%;
+    transition: 0.5s;
+    transform-origin: 0 100%;
+}
+
+.text-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    opacity: 0;
+    background: #ba4c02;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #181818, #ba4c02);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #181818, #ba4c02); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 20px 30px;
+    transform: rotateX(-90deg);
+    transform-origin: 50% 0%;
+    transition: 0.5s;
+}
+
+.text-box h1,
+.text-box p{
+    line-height: 1.3em;
+}
+
+.text-box h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container img:hover{
+    transform: rotateX(90deg);
+    opacity: 0;
+}
+
+.container:hover .text-box{
+    transform: rotateX(0deg);
+    opacity: 1;
+}
