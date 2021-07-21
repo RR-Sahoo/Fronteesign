@@ -1,0 +1,41 @@
+body{
+    background: #000;
+    color: #fff;
+}
+
+.main{
+    margin: 30px 70px;
+}
+
+.main h1{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.main p{
+    line-height: 25px;
+    font-size: 20px;
+}
+
+/* Scroll Bar */
+
+/* Width */
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,rgb(255,11,222));
+    border-radius: 15px;
+}
+
+/* Handle on Hover */
+::-webkit-scrollbar-thumb:hover{
+    background: #951599;
+}
