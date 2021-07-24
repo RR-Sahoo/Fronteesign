@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background: #F4F8F9;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+input#menu{
+    display: none;
+}
+
+.icon{
+    background: #fff;
+    cursor: pointer;
+    display: block;
+    height: 24px;
+    padding: 16px;
+    width: 24px;
+}
+
+label.icon{
+    position: fixed;
+    z-index: 200;
+}
+
+.icon .menu,
+.icon .menu::before,
+.icon .menu::after{
+    background: #9FB1BD;
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition: background ease 0.3s, top ease 0.3s, transform ease 0.3s;
+    width: 20px;
+}
+
+#menu:checked + .icon .menu::after{
+    transform: rotate(-45deg);
+}
+
+#menu:checked + .icon .menu::before,
+#menu:checked + .icon .menu::after{
+    top: 0;
+    transition: top ease 0.3s, transform ease 0.3s 0.3s;
+}
+
+.icon:hover .menu,
+.icon:hover .menu::after,
+.icon:hover .menu::before{
+    background: #FC5185;
+}
+
+.icon .menu{
+    left: 18px;
+    top: 27px;
+}
+
+.icon .menu::before{
+    top: -6px;
+}
+
+.icon .menu::after{
+    top: 6px;
+}
+
+#menu:checked + .icon .menu{
+    background: transparent;
+}
+
+#menu:checked + .icon .menu::before{
+    transform: rotate(45deg);
+}
+
+nav{
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    padding-top: 60px;
+    position: fixed;
+    transition: width ease 0.6s;
+    width: 60px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+#menu:checked ~ nav{
+    width: 200px;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li{
+    cursor: pointer;
+    display: block;
+    line-height: 60px;
+    padding-left: 16px;
+    white-space: nowrap;
+}
+
+nav li:hover{
+    background: #FC5185;
+    color: #fff;
+}
+
+nav li:hover i{
+    color: #fff;
+}
+
+nav i{
+    color: #9FB1BD;
+    margin-right: 24px;
+    vertical-align: text-bottom;
+}
