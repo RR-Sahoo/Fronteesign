@@ -1,0 +1,44 @@
+body{
+    background: rgba(0, 0, 0, 0.748);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    margin-top: 300px;
+}
+span{
+    width: 15px;
+    height: 100px;
+    float: left;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    animation: load 2s infinite;
+}
+span:nth-child(2){
+    animation-delay: 0.2s;
+}
+span:nth-child(3){
+    animation-delay: 0.4s;
+}
+span:nth-child(4){
+    animation-delay: 0.6s;
+}
+span:nth-child(5){
+    animation-delay: 0.8s;
+}
+span:nth-child(6){
+    animation-delay: 1s;
+}
+span:nth-child(7){
+    animation-delay: 1.2s;
+}
+span:nth-child(8){
+    animation-delay: 1.4s;
+}
+@keyframes load {
+    20%{
+        height: 0px;
+    }
+}
