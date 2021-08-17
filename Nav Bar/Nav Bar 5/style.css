@@ -1,0 +1,101 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+    background: #111;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+.container{
+    background: linear-gradient(to left, #fff, rgb(243, 243, 157));
+    border-radius: 15px;
+}
+.menu{
+    font-family: 'Bebas Neue', cursive;
+    display: flex;
+}
+.title{
+    color: #111;
+    font-size: 24px;
+    float: right;
+    line-height: 50px;
+    padding: 24px;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.item{
+    display: block;
+    float: left;
+    white-space: nowrap;
+    color: #111;
+    font-size: 28px;
+}
+.item:last-child{
+    margin-right: 0;
+}
+.item .toggle{
+    display: none;
+}
+.toggle:checked~.expand{
+    max-width: 250px;
+    background: #111;
+}
+.toggle:checked~.expand .icon{
+    color: yellow;
+}
+.toggle:checked~.expand .text{
+    color: yellow;
+}
+.expand{
+    max-width: 48px;
+    overflow: hidden;
+    transition: all ease-in-out 233ms;
+    padding: 1.5rem;
+    padding-right: 1.5rem;
+    cursor: pointer;
+}
+.expand:hover{
+    background: #111;
+}
+.expand:hover .icon{
+    color: #fff;
+    animation: jiggle ease-in-out 400ms infinite;
+    --rotation: -5;
+    --y: -5;
+    --x: 5;
+}
+.item label{
+    line-height: 3rem;
+    cursor: pointer;
+}
+.item .icon{
+    display: inline-block;
+    font-size: 3rem;
+    line-height: 3rem;
+    vertical-align: middle;
+    width: 3rem;
+    text-align: center;
+    margin-right: 0.5rem;
+    transition: color ease-in-out 80ms;
+}
+.item .text{
+    line-height: 3rem;
+    color: transparent;
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 1.5rem;
+    transition: color ease-out 333ms;
+}
+@keyframes jiggle {
+    0%,100%{
+        transform: translate(calc(var(--x) * -1%), 0)
+                   rotate(calc(var(--rotation) * -1deg));
+    }
+    50%{
+        transform: translate(calc(var(--x) * 1%), calc(var(--y) * 1%))
+                   rotate(calc(var(--rotation) * 1deg));
+    }
+}
