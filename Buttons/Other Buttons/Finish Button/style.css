@@ -1,0 +1,125 @@
+/* Gooogle Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+body{
+    background: #111;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+.frame{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    font-family: 'Open Sans', sans-serif;
+}
+.button{
+    position: relative;
+    display: block;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    width: 260px;
+    font-size: 21px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    box-sizing: border-box;
+    top: 170px;
+    left: 70px;
+    text-align: center;
+    height: 60px;
+    line-height: 56px;
+}
+.button:hover{
+    background: #49504c;
+}
+.button img{
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    opacity: 0;
+    z-index: 2;
+}
+.circle{
+    position: absolute;
+    top: 170px;
+    left: 170px;
+    width: 60px;
+    height: 60px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+    stroke-dasharray: 183 183;
+    stroke-dashoffset: 183;
+    stroke-linecap: round;
+    pointer-events: none;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+input:checked~.button{
+    animation: button 1s ease both, fill 0.5s ease-out 1.5s forwards;
+}
+input:checked~.button img{
+    animation: check 0.5s ease-out 1.5s both;
+}
+input:checked~.circle{
+    animation: circle 2s ease-out 0.5s both;
+}
+@keyframes button {
+    0%{
+        width: 260px;
+        height: 70px;
+        color: #fff;
+        border-color: #fff;
+    }
+    50%{
+        color: transparent;
+    }
+    100%{
+        width: 60px;
+        left: 170px;
+        border-color: #45b078;
+        background: transparent;
+        color: transparent;
+    }
+}
+@keyframes circle {
+    0%{
+        stroke-dashoffset: 183;
+    }
+    50%{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 183;
+        transform: rotate(-90deg) scale(1);
+    }
+    90%,
+    100%{
+        stroke-dasharray: 500 500;
+        transform: rotate(-90deg) scale(2);
+        opacity: 0;
+    }
+}
+@keyframes fill {
+    0%{
+        background: transparent;
+        border-color: #fff;
+    }
+    100%{
+        background: #fff;
+    }
+}
+@keyframes check {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
