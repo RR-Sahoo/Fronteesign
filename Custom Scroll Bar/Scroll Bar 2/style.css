@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    background: #111;
+    
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.text{
+    color: lightgreen;
+    font-size: 35px;
+    text-align: center;
+    line-height: 1em;
+}
+.line{
+    background: white;
+    height: 8px;
+    border-radius: 5px;
+    width: 0%;
+    position: fixed;
+    top: 0px;
+}
