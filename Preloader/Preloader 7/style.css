@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #000;
+    color: #141414;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span{
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    animation: glow 3.1s linear infinite;
+}
+@keyframes glow {
+    0%{
+        color: #141414;
+        text-shadow: none;
+    }
+    90%{
+        color: #141414;
+        text-shadow: none;
+    }
+    100%{
+        color: #f3ff08;
+        text-shadow: 0 0 25px #ffff17,
+                     0 0 30px #ffff17;
+    }
+}
+span:nth-child(1){
+    animation-delay: 0.3s;
+}
+span:nth-child(2){
+    animation-delay: 0.6s;
+}
+span:nth-child(3){
+    animation-delay: 0.9s;
+}
+span:nth-child(4){
+    animation-delay: 1.2s;
+}
+span:nth-child(5){
+    animation-delay: 1.5s;
+}
+span:nth-child(6){
+    animation-delay: 1.8s;
+}
+span:nth-child(7){
+    animation-delay: 2.1s;
+}
