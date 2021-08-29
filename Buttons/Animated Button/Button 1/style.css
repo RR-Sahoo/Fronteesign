@@ -33,7 +33,7 @@ body{
     left: 0;
     width: 5px;
     height: 100%;
-    background-color: #fff;
+    background-color: red;
     z-index: -1;
     transition: all 0.5s;
 }
