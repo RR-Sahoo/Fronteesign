@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #000;
+    color: #fff;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ol{
+    width: 300px;
+    list-style: none;
+}
+ol li{
+    font-size: 1.2rem;
+    padding: 20px 30px;
+    margin: 10px 0;
+    background: rgb(23, 23, 23);
+    z-index: 100;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+ol li::before{
+    content: "";
+    position: absolute;
+    top: 0 ;
+    left: 0 ;
+    width: 5px;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.4s;
+}
+ol li:hover:before{
+    width: 100%;
+}
+ol li:nth-child(1):before{
+    background: #4285f4;
+}
+ol li:nth-child(2):before{
+    background: #db4477;
+}
+ol li:nth-child(3):before{
+    background: #f4b400;
+}
+ol li:nth-child(4):before{
+    background: #0f9d58;
+}
+ol li:hover{
+    transform: translateX(20px);
+}
