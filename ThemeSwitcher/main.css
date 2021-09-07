@@ -1,0 +1,88 @@
+@import url('https://font.googleapis.com/css2?family=Poppins&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins',sans-serif;
+}
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background: honeydew;
+}
+.card{
+   width: 350px;
+   height: 350px;
+   border-radius: 10px;
+   background: #FFB319;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   box-shadow: 10px 10px 10px;
+}
+.btn{
+   width: 250px;
+   height: 45px;
+   background: none;
+   border-radius: 10px;
+   margin-bottom: 20px;
+   z-index: 10;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+.txt{
+   top: 0;
+   left: 0;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background: whitesmoke;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.185);
+}
+.btn input{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   cursor: pointer;
+   appearance: none;
+   -webkit-appearance: none;
+}
+.colors{
+   position: absolute;
+   display: flex;
+   z-index: -2;
+}
+.color{
+   width: 30px;
+   height: 30px;
+   background: #FFB319;
+   border-radius: 50px;
+   margin: .6em;
+   border: 4px solid white;
+   transition: all .4s;
+   cursor: pointer;
+   transition-delay: calc(var(--i)*0.1s);
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.185);
+}
+.color:nth-child(2){
+   background: #F037A5;
+}
+.color:nth-child(3){
+   background: #3E00FF;
+}
+.color:nth-child(4){
+   background: #DA0037;
+}
+.btn input:checked ~ .colors .color{
+   transform: translateY(-50px);
+}
