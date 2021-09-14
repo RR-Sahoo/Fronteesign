@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #000;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #6495ed;
+    position: relative;
+}
+.box span{
+    position: absolute;
+    top: -100%;
+    left: -105px;
+    width: 800%;
+    height: 80px;
+    border: 4px solid #6495ed;
+    border-radius: 50%;
+    animation: anime 4s infinite;
+}
+.box span:nth-child(1){
+    transform: rotate(-60deg);
+    animation: anime2 4s infinite;
+}
+.box span:nth-child(2){
+    transform: rotate(60deg);
+    animation: anime3 4s infinite;
+}
+@keyframes anime {
+    0%,100%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes anime2 {
+    0%,100%{
+        transform: rotate(-60deg);
+    }
+    50%{
+        transform: rotate(-300deg);
+    }
+}
+@keyframes anime3 {
+    0%,100%{
+        transform: rotate(60deg);
+    }
+    50%{
+        transform: rotate(300deg);
+    }
+}
