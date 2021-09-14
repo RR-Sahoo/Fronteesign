@@ -1,0 +1,45 @@
+body{
+   margin-top: 250px;
+   padding: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.insta {
+   width: 150px;
+   height: 150px;
+   background: radial-gradient(circle at 30% 107%, #fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%);
+   border-radius: 35px;
+   display: grid;
+   place-items: center;
+   filter: drop-shadow(0 0mm 3mm rgb(153,153,153));
+}
+.innerbox {
+   width: 120px;
+   height: 120px;
+   border: 7.5px solid #fff;
+   border-radius: 32px;
+   display: grid;
+   place-items: center;
+   position: relative;
+}
+.innerbox::before {
+   content: '';
+   width: 45px;
+   height: 45px;
+   border: 7.5px solid #fff;
+   border-radius: 50%;
+   background: transparent;
+   position: absolute;
+}
+.innerbox::after {
+   content: '';
+   width: 10px;
+   height: 10px;
+   border: 2px solid #fff;
+   border-radius: 50%;
+   background: #fff;
+   position: absolute;
+   top: 8px;
+   right: 10px;
+}
