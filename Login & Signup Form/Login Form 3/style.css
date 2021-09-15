@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #eeeeee;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+}
+.box{
+    flex-direction: column;
+    background: #fff;
+    width: 350px;
+    height: 400px;
+}
+.heading{
+    margin-bottom: 30px;
+}
+.input{
+    width: 250px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background: #f3f1f1;
+    margin: 10px 0;
+    padding: 0 15px;
+    outline: none;
+    font-size: 0.9rem;
+}
+.gender{
+    width: 230px;
+    height: 40px;
+    margin: 10px 0;
+}
+.gender input{
+    -webkit-appearance: none;
+    text-align: center;
+    line-height: 40px;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background: #f3f1f1;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 50px;
+    margin: 0 5px;
+    outline: none;
+}
+.gender input:checked{
+    background: #ff414f;
+    color: white;
+}
+.gender input::before{
+    content: 'Female';
+}
+.gender input:nth-child(2)::before{
+    content: 'Male';
+}
+.btn{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    background: #ff414f;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+.btn:hover{
+    background: #ff2735af;
+}
