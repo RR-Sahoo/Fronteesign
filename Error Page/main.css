@@ -1,0 +1,32 @@
+.page_404 {
+   padding: 40px 0;
+   background: #fff;
+   font-family: serif;
+}
+.page_404 img {
+   width: 100%;
+}
+.four_zero_four_bg h1 {
+   background-image: url(https://media2.giphy.com/media/aYpmlCXgX9dc09dbpl/giphy.gif?cid=ecf05e47tw0io1yc3le6uuh5av5tetki7q14f3cj70oyckfy&rid=giphy.gif&ct=g);
+   height: 400px;
+   background-position: center;
+   background-repeat: no-repeat;
+   margin-top: 40px;
+}
+.four_zero_four_bg h1 {
+   font-size: 80px;
+}
+.four_zero_four_bg h3 {
+   font-size: 80px;
+}
+.link_404 {
+   color: #fff !important;
+   padding: 10px 20px;
+   background: #39ac31;
+   margin: 20px 0;
+   display: inline-block;
+   text-decoration: none;
+}
+.contant_box_404 {
+   margin-top: 40px;
+}
