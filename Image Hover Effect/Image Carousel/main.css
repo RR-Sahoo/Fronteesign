@@ -1,0 +1,114 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+body {
+   height: 100vh;
+   width: 100%;
+   font-family: sans-serif;
+   overflow: hidden;
+   background-image: url(https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706_960_720.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   
+}
+.img__box {
+   position: relative;
+   height: 100%;
+   width: 100%;
+}
+.img__box img {
+   height: 100%;
+   width: 100%;
+}
+.slide span {
+   position: absolute;
+   right: 80px;
+   height: 60px;
+   width: 60px;
+   border: 2px solid #fff;
+   border-radius: 50%;
+   z-index: 10;
+   cursor: pointer;
+   transform: transform 0.5s;
+}
+.slide span:nth-child(1) {
+   top: 30px;
+}
+.slide span:nth-child(2) {
+   top: 120px;
+}
+.slide span:nth-child(3) {
+   top: 210px;
+}
+.slide span img {
+   height: 100%;
+   width: 100%;
+   border-radius: 50%;
+}
+.slide span .arrow {
+   position: absolute;
+   left: -25px;
+   top: 50%;
+   height: 1px;
+   width: 28px;
+   border-radius: 100px;
+   background: rgba(255, 255, 255, 0.7);
+   opacity: 0;
+   transition-delay: 0.3s;
+   transition: 0.5s;
+}
+.slide span .details {
+   position: absolute;
+   top: 0;
+   left: -280px;
+   height: 100px;
+   width: 150px;
+   font-size: 8px;
+   color: #000;
+   opacity: 0;
+   transition: all 0.5s;
+   transition-delay: 0.5s;
+}
+.slide span .details h4 {
+   text-decoration: underline;
+   text-underline-offset: 2px;
+   font-size: 12px;
+   letter-spacing: 2px;
+}
+.slide span.show .details {
+   left: -190px !important;
+   opacity: 1;
+}
+.slide span.show .arrow {
+   left: -33px;
+   opacity: 1;
+}
+.slide span::after, .slide span::before {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border: 1px solid;
+   border-radius: 50%;
+   opacity: 0;
+}
+.slide span::after {
+   height: 150%;
+   width: 150%;
+   border-color: rgba(255, 255, 255, 0.5);
+}
+.slide span::before {
+   height: 250%;
+   width: 150%;
+   border-color: rgba(255, 255, 255, 0.3);
+}
+.slide span.show {
+   transform: scale(1.4);
+   z-index: 99;
+}
+.slide span.show::before, .slide span.show::after {
+   opacity: 1;
+}
