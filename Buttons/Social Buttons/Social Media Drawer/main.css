@@ -1,0 +1,176 @@
+* {
+   box-sizing: border-box;
+}
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background: #2d0379;
+   color: #fff;
+   text-align: center;
+   padding: 20px;
+}
+a {
+   color: #fff;
+}
+.drawer {
+   width: 180px;
+   height: 60px;
+   margin: 80px auto;
+   position: relative;
+   cursor: pointer;
+}
+.box {
+   width: 180px;
+   height: 40px;
+   background-color: #0c7cd5;
+   position: relative;
+   border-radius: 2px;
+   padding: 0.5em 0;
+   transition: all ease-in-out 0.25s;
+   transform-style: preserve-3d;
+   perspective: 600px;
+}
+.box::before {
+   position: absolute;
+   content: "";
+   width: 0;
+   height: 40px;
+   background-color: #0d8aee;
+   bottom: 0;
+   left: 0;
+   transform-origin: left center;
+   transform: rotateY(285deg) rotate(12deg) rotateX(0deg);
+   transition: all cubic-bezier(0.92, -0.15, 0.21, 0.86) 0.25s;
+}
+.box::after {
+   position: absolute;
+   content: "";
+   width: 0;
+   height: 40px;
+   background-color: #0a6ebd;
+   bottom: 0;
+   right: 0;
+   transform-origin: top right;
+   transform: rotateY(86deg) rotate(-12deg) rotateX(0deg);
+   transition: all cubic-bezier(0.92, -0.15, 0.21, 0.86) 0.25s;
+}
+.ball {
+   display: inline-block;
+   position: absolute;
+   bottom: -10px;
+   left: 50%;
+   width: 45px;
+   height: 45px;
+   margin: 0;
+   border-radius: 50%;
+   background-image: radial-gradient(circle at 50% 120%,
+                                       #ff5690,
+                                       #d61a5a 80%,
+                                       #941a44, 100%
+   );
+   transition: all cubic-bezier(1, -0.49, 0.46, 0.8) 0.25s;
+   overflow: hidden;
+}
+.ball .twitter {
+   background-image: radial-gradient(
+      circle at 50% 120%,
+      #25a1ce,
+      #0084b4 80%,
+      #0080af 100%
+   );
+}
+.ball .github {
+   background-image: radial-gradient(
+      circle at 50% 120%,
+      #312121;
+      #151213 80%,
+      #000 100%
+   );
+}
+.ball .website {
+   background-image: radial-gradient(
+      circle at 50% 120%,
+      #fb486a,
+      #d40028 80%,
+      #b70728 100%
+   );
+}
+.ball .fa {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(50%, 50%);
+   font-size: 24px;
+}
+.ball::before {
+   content: "";
+   position: absolute;
+   background: radial-gradient(
+      circle at 50% 120%,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0) 70%
+   );
+   border-radius: 50%;
+   bottom: 15%;
+   left: 30%;
+   opacity: 0.6;
+   height: 100%;
+   width: 90%;
+   filter: blur(5px);
+}
+.cover {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 180px;
+   height: 60px;
+   background-color: #2196f3;
+   border-radius: 2px;
+   z-index: 1;
+   box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.2);
+   transition: all cubic-bezier(0.92, -0.15, 0.21, 0.86) 0.25s;
+}
+.cover::before {
+   position: absolute;
+   content: "";
+   width: 90%;
+   height: 80%;
+   top: 50%;
+   left: 50%;
+   border: 1px solid rgba(255, 255, 255, 0.2);
+   transform: translate(-50%, -50%);
+   border-radius: 4px;
+}
+.cover::after {
+   position: absolute;
+   content: "";
+   width: 30px;
+   height: 2px;
+   border-style: solid;
+   border-color: rgba(255, 255, 255, 0.8);
+   border-width: 0 1px 2px 1px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border-bottom-right-radius: 2px;
+   border-bottom-right-radius: 2px;
+   box-shadow: 4px 0px 6px 0px rgba(255, 255, 255, 0.2);
+}
+.drawer:hover .box {
+   box-shadow: 0 25px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.drawer:hover .box::before,
+.drawer:hover .box::after {
+   width: 90%;
+}
+.drawer:hover .ball-1 {
+   transform: translate3d(-80px, -45px, 0);
+}
+.drawer:hover .ball-2 {
+   transform: translate3d(-10px, -30px, 0);
+}
+.drawer:hover .ball-3 {
+   transform: translate3d(50px , -50px, 0);
+}
+.drawer:hover .cover {
+   transform: translate3d(20px , 30px, 250px);
+}
