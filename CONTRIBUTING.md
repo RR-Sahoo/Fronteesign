@@ -32,14 +32,14 @@ git clone https://github.com/<your_user_name>/Fronteesign.git
 **3.** Navigate to the project directory :file_folder: .
 
 ```
-cd Bundli-Frontend
+cd Fronteesign
 
 ```
 
 **4.** Add a reference(remote) to the original repository.
 
 ```
-git remote add upstream https://github.com/Ayush7614/Bundli-Frontend.git
+git remote add upstream https://github.com/RR-Sahoo/Fronteesign.git
 ```
 **5.** Check the remotes for this repository.
 ```
@@ -80,7 +80,7 @@ git push -u origin <your_branch_name>
 
 **14.** Click on `Create Pull Request`.
 
-**15** Voila! You have made a PR to the awesome-developer-portfolio project. Sit back patiently and relax while the your PR is reviewed. 
+**15** Voila! You have made a PR to the Fronteesign project. Sit back patiently and relax while the your PR is reviewed. 
 
 In case of any help, please free to contact me via mail @ rashmivicky06@gmail.com
 
