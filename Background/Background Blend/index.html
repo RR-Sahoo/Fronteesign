@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Background Blend</title>
+   <link rel="stylesheet" href="main.css">
+</head>
+<body>
+   <div id="inputDiv">
+      <h1>CSS3 background-blend-mode</h1>
+       <form> 
+       <div id="radioBM">
+       <label><input type="radio" name="BM" value="color">color</label>
+       <label><input type="radio" name="BM" value="color-burn">color-burn</label>
+       <label><input type="radio" name="BM" value="color-dodge">color-dodge</label>
+       <label><input type="radio" name="BM" value="darken">darken</label>
+       <label><input type="radio" name="BM" value="difference" checked >difference</label>
+       <label><input type="radio" name="BM" value="exclusion">exclusion</label>
+       <label><input type="radio" name="BM" value="hard-light">hard-light</label>
+       <label><input type="radio" name="BM" value="hue">hue</label>
+       <label><input type="radio" name="BM" value="lighten">lighten</label>
+       <label><input type="radio" name="BM" value="luminosity">luminosity</label>
+       <label><input type="radio" name="BM" value="multiply">multiply</label>
+       <label><input type="radio" name="BM" value="overlay">overlay</label>
+       <label><input type="radio" name="BM" value="saturation">saturation</label>
+       <label><input type="radio" name="BM" value="screen">screen</label>
+       <label><input type="radio" name="BM" value="soft-light">soft-light</label>
+       <br>
+       <input type="text" name="BMcolor" id="BMcolor"  value="#abcdef">
+        </div>
+        
+      <input type="range" value='65' min="0" max="100"  autocomplete="off">
+      <!-- autocomplete="off" pare que Firefox no "recuerde" el valor del input "on refresh" -->
+      
+      <!--<p>Aunque no lo parezca este es un &lt;input type=&quot;range&quot;&gt;. <br>
+        Mueva el cursor para ver el cambio.</p>-->
+      </form>
+      </div>
+      <script src="app.js"></script>
+</body>
+</html>
