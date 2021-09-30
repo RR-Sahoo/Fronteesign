@@ -1,0 +1,77 @@
+body {
+    height: 100vh;
+    background: #0f2027;
+    background: linear-gradient(120deg, #2c5364, #203a43 100%);
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jua', sans-serif;
+}
+
+.hover_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.hover_wrap figure {
+    width: 400px;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.hover_wrap figure img {
+    width: 100%;
+    display: block;
+    transition: all .3s ease;
+    border-radius: 4px;
+}
+
+.hover_wrap figure figcaption {
+    position: absolute;
+    left: 50%; top: 50%;
+    /*
+    left: 0; top: 0; right: 0; bottom: 0;
+    margin: auto;
+    */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all .3s ease;
+    background: #000;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.hover_wrap figure figcaption strong {
+    color: #fff;
+    z-index: 20;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+
+.hover_wrap figure:hover img {
+    opacity: 0.1;
+}
+
+.hover_wrap figure.hover5 figcaption{transform: translate(150%, -50%) rotate(360deg)}
+.hover_wrap figure.hover6 figcaption{transform: translate(-250%, -50%) rotate(-360deg)}
+.hover_wrap figure:hover figcaption{transform: translate(-50%, -50%)}
+/*
+.hover_wrap figure.hover5 figcaption{transform: translateX(80%) rotate(360deg)}
+.hover_wrap figure.hover6 figcaption{transform: translateX(-80%) rotate(-360deg)}
+.hover_wrap figure:hover figcaption{transform: translateX(0)}
+*/
+@media(max-width:800px) {
+    .hover_wrap {
+        flex-direction: column;
+    }
+}
