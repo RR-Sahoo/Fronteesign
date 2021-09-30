@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .container .card {
+    position: relative;
+    width: 280px;
+    height: 350px;
+    margin: 30px;
+  }
+  
+  .container .card:nth-of-type(2) {
+    transform: rotate(5deg);
+  }
+  
+  .container .card .image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transform: translate(10px, 10px);
+  }
+  
+  .container .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 255px;
+    height: 325px;
+    border: 25px solid #fff;
+    z-index: 1;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 7px 7px 21px #bdbdbd, -7px -7px 21px #ffffff;
+    background: transparent;
+  }
+  
+  .container .card:nth-of-type(1)::before {
+    filter: url(#wavy1);
+  }
+  
+  .container .card:nth-of-type(2)::before {
+    filter: url(#wavy2);
+  }
+  
+  .container .card:nth-of-type(3)::before {
+    filter: url(#wavy3);
+  }
+  
+  .image1 {
+    background-image: url("https://images.unsplash.com/photo-1606461738475-5ab52d1d995b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=461&q=80");
+  }
+  
+  .image2 {
+    background-image: url("https://images.unsplash.com/photo-1604842591806-1f45c2f7e858?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80");
+  }
+  
+  .image3 {
+    background-image: url("https://images.unsplash.com/photo-1501696461415-6bd6660c6742?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80");
+  }
+  
+  svg {
+    width: 0;
+    height: 0;
+  }
+  
+  .container .card .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50px 30px 30px 30px;
+    transform: translate(10px, 10px);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    line-height: 1.4;
+    font-size: 20px;
+    opacity: 0;
+    transition-duration: 1s;
+  }
+  
+  .container .card:hover .info {
+    opacity: 1;
+  }
+  
