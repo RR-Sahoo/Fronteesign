@@ -1,0 +1,148 @@
+
+/* Made by Gambhir Sharma */
+/* **** 25 July 2022 **** */
+/* 
+****** Concepts used ******
+1. Child elements selector
+2. Used css variables
+3. Conic-gradients
+*/
+/* 
+-------- Tested on --------
+1. Firefox (Ubuntu)
+2. Firefox (windows)
+3. Brave 
+4. Edge
+5. Chrome
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*  Color variables  */
+  --bg-color: #202020;
+  --green: #0ef30f;
+
+  /*  Dimentions variables  */
+  --canvas-size: 70vmin;
+  --outer-circle: 55vmin;
+  --main-circle: 50vmin;
+
+  /*  Border variabes  */
+  --border-width: 0.5vmin;
+  --border: var(--border-width) solid var(--green);
+}
+*::after,
+*::before {
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.canvas {
+  width: var(--canvas-size);
+  height: var(--canvas-size);
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.outer-circle {
+  position: absolute;
+  height: var(--outer-circle);
+  width: var(--outer-circle);
+  border-radius: 50%;
+  border: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.outer-circle i {
+  position: absolute;
+  height: var(--outer-circle);
+  width: var(--border-width);
+  border: var(--border);
+}
+.outer-circle i:nth-child(2) {
+  transform: rotate(22.5deg);
+}
+.outer-circle i:nth-child(3) {
+  transform: rotate(45deg);
+}
+.outer-circle i:nth-child(4) {
+  transform: rotate(67.5deg);
+}
+.outer-circle i:nth-child(5) {
+  transform: rotate(90deg);
+}
+.outer-circle i:nth-child(6) {
+  transform: rotate(112.5deg);
+}
+.outer-circle i:nth-child(7) {
+  transform: rotate(135deg);
+}
+.outer-circle i:nth-child(8) {
+  transform: rotate(157.5deg);
+}
+.main-circle {
+  position: absolute;
+  height: var(--main-circle);
+  width: var(--main-circle);
+  border-radius: 50%;
+  border: var(--border);
+  /* background: var(--bg-color); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-circle p {
+  position: absolute;
+  width: calc(var(--main-circle) - 10vmin);
+  height: calc(var(--main-circle) - 10vmin);
+  border: var(--border);
+  border-radius: 50%;
+}
+.main-circle p:nth-child(2) {
+  width: calc(var(--main-circle) - 25vmin);
+  height: calc(var(--main-circle) - 25vmin);
+}
+span {
+  position: absolute;
+  height: var(--main-circle);
+  width: 0.2vmin;
+  background: var(--green);
+  transform: rotate(var(--deg));
+}
+.radar {
+  position: absolute;
+  height: var(--main-circle);
+  width: var(--main-circle);
+  border-radius: 50%;
+  background-image: conic-gradient(
+    rgb(26, 212, 26),
+    rgb(27, 100, 27),
+    rgb(37, 92, 37),
+    rgb(27, 85, 27),
+    rgb(0, 0, 0)
+  );
+  animation: radar linear infinite 5s;
+}
+
+/* Animation Part */
+@keyframes radar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
