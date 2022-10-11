@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+body{
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    height: 15vh;
+    /* position: sticky; */
+    background: linear-gradient(to right, #9c27b0,#8ecdff);
+}
+nav{
+    width: 100%;
+    height: 15vh;
+    /* position: sticky; */
+    display: flex;
+    align-items: center;
+}
+ul{
+    width: 100%;
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 4vw;
+}
+ul li {
+    display: inline;
+    height: 5vh;
+    margin-left: 2vw;
+}
+li a{
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+    font-size: 1.5vw;
+}
+li:hover{
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 1.6vw;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+.logo a img{
+    width: 250px;
+    padding: 2px 5vw;
+}
+.logo a img:hover{
+    width: 270px;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    /* position: relative; */
+    background: linear-gradient(to right, #9c27b0,#8ecdff);
+}
+
+.info{
+    height: 80vh;
+    width: 60%;
+    /* transform: translateY(-50%); */
+    /* display: flex;
+    align-items: center; */
+    position: absolute;
+    top: -10vh;
+    left: -10vh;
+}
+.circle{
+    padding: 5vw;
+    height: 100vh;
+    width: 90%;
+    border-radius: 50%;
+    /* background-color:rgb(255, 141, 141); */
+    transform : rotate(0deg);
+    transition: 1s;
+}
+
+.feature img{
+    width: 4vw;
+}
+.feature{
+    position: absolute;
+    width: 22vw;
+    display: flex;
+    color: white;
+}
+.feature div{
+    margin-left: 1vw;
+}
+.feature div p{
+    margin-left: 0.2vw;
+}
+.one{
+    top: 54vh;
+    left: 48vw;
+}
+.two{
+    top: 0vh;
+    left: 20vw;
+    transform: rotate(-90deg);
+}
+.three{
+    top: 56vh;
+    left: -5vw;
+    /* left: -57vw; */
+    transform: rotate(-180deg);
+}
+.four{
+    top: 113vh;
+    left: 20vw;
+    transform: rotate(-270deg);
+}
+.mobile img{
+    width: 11vw;
+    /* height: 50vh; */
+    position: absolute;
+    left: 28vw;
+    top: 38vh;
+}
+.controls{
+    position: absolute;
+    left: 85vw;
+    top: 52vh;
+    text-align: center;
+}
+.controls h2{
+    margin: 1vh 0px;
+    color: #fff;
+}
+#upBtn{
+    width: 2vw;
+    cursor: pointer;
+}
+#downBtn{
+    width: 2vw;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+.overlay{
+    width: 0;
+    height: 0;
+    border-top: 30vw solid white;
+    border-bottom:30vw solid white;
+    border-left: 30vw solid white;
+    border-right: 30vw solid transparent;
+    position: absolute;
+    left: 4vw;
+    top: 0vw;
+
+}
