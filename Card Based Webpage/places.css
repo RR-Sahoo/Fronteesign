@@ -1,0 +1,59 @@
+body {
+    background: linear-gradient(30deg, rgb(77,77,77), rgb(58,58,58));
+    color: rgb(68,68,68);
+    margin-top: 100px;
+}
+main li img {
+    width: 300px;
+    height: 280px;
+    object-fit: cover;
+    /* border-radius: 6px 0 0 6px; */
+}
+#logo a {
+     color: rgb(183, 230, 235);
+}
+header {
+    position: static;
+}
+header a {
+    color: rgb(183, 230, 235);
+}
+main ul {
+    width: 1200px;
+    margin: 0 auto 48px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+main li {
+    display: flex;
+    background-color: white;
+    box-shadow: 2px 4px 8px rgba(67,67,67,0.3);
+    border-radius: 6px;
+    overflow: hidden;
+    /* width: 600px; */
+}
+main li:nth-of-type(3){
+    grid-column: 1 / span 2;
+
+}
+.item-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.actions a {
+    color: rgb(22,211,228);
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.actions a:hover {
+    background-color: rgb(235, 253, 255);
+    text-decoration: none;
+}
+.actions {
+    text-align: end;
+}
